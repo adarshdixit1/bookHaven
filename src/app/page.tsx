@@ -1,8 +1,12 @@
+import React from "react";
 
-export default function Home() {
+const Home = (): any => {
+  const array: any = 5;
   return (
     <div>
-      
+      <h1>{array}</h1>
     </div>
   );
-}
+};
+
+export default Home;
