@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
 
-const Home = (): any => {
-  const array: any = 5;
+const Home = () => {
+  const array = '5';
+  const name = 'hn Do';
   return (
     <div>
-      <h1>{array}</h1>
+      <h1>{array}, {name}, </h1>
     </div>
   );
 };

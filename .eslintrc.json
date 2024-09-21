@@ -11,7 +11,8 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:@next/next/recommended"
+    "plugin:@next/next/recommended",
+    "plugin:node/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -21,22 +22,28 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "import"
-  ],
+  "plugins": ["react", "@typescript-eslint", "import"],
   "rules": {
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "react/react-in-jsx-scope": "off",
-    "react/jsx-uses-react": "off"
+    "react/jsx-uses-react": "off",
+    "node/no-unsupported-features/es-syntax": "off"
   },
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
       "rules": {
-        // TypeScript specific rules
+        "quotes": [
+          "warn",
+          "single",
+          { "avoidEscape": true, "allowTemplateLiterals": true }
+        ],
+        "jsx-quotes": ["error", "prefer-double"],
+        "semi":[
+          "error",
+          "always"
+        ]
       }
     }
   ],
